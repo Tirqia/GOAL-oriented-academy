@@ -1,0 +1,26 @@
+ol{
+    text-align: center;
+    color: yellowgreen;
+    font-size: xx-large;
+}
+
+li{
+    text-align: center;
+    color: black;
+    size: 50px;
+    /* list-style-position: inside; */
+}
+
+a{
+    text-align: center;
+    color: red;
+    font-size: medium;
+}
+
+button{
+    text-decoration: double;
+    direction: ltr;
+    color: blue;
+    text-align: center;
+    size: 40px;
+}

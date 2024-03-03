@@ -1,0 +1,46 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: auto;
+    height: 100%; /* Set height to 100% for both body and html */
+    background-image: url('flower.jpeg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #040000; /* Set text color to a contrasting color for better readability */
+}
+
+header {
+    background-color: #5a1717;
+    color: #5c4646;
+    text-align: center;
+    padding: 2em;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.service {
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2em;
+    padding: 2em;
+    width: 300px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

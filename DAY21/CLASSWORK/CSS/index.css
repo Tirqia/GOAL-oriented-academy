@@ -1,0 +1,26 @@
+.info-box {
+    text-align: center;
+    border: 1px solid #3498db;
+    background-color: #ecf0f1;
+    padding: 15px;
+  }
+
+  .call-to-action {
+    background-color: #e74c3c;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+
+  .call-to-action:hover {
+    background-color: #c0392b;
+  }
+
+  .content p {
+    font-style: italic;
+    color: #2ecc71;
+  }
+
+  ul li:nth-child(even) {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+  }

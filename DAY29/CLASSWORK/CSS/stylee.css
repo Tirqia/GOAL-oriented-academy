@@ -1,0 +1,72 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #944747;
+  }
+  
+  .identity-card {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo {
+    max-width: 150px; /* Adjust the width of the photo as needed */
+    padding: 20px;
+    position: relative;
+  }
+  
+  .photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+  }
+  
+  .card-number {
+    display: flex;
+    bottom: 20px; /* Adjust the positioning as needed */
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+    transform: translateX(10%);
+  }
+  
+  .details {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+.header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+  
+.header h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #555;
+}
+  
+.details p {
+    margin: 5px 0;
+}
+.card-id{
+    text-align: center;
+    font-size: 15px
+}
+#img3{
+    padding: 20px;
+    display: flex;
+}

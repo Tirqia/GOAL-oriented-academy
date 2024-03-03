@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2B2A4C;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#hero-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+}
+
+#hero-section h2 {
+    color: #333;
+}
+
+#hero-section p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#hero-section a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero-section a:hover {
+    background-color: #45a049;
+}
+
+#featured-categories {
+    margin-top: 40px;
+}
+
+.category-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.category-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #666;
+}
+
+#about-us {
+    margin-top: 40px;
+    text-align: right;
+}
+
+#about-us p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about-us a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#about-us a:hover {
+    background-color: #1c431e;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+section .content {
+    width: 70%;
+    text-align: center;
+}
+
+section .design {
+    width: 25%;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    background-color: #c50c0c;
+    font-style: italic;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8c0808;
+}
