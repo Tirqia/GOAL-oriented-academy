@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f20808;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    background-image: url('247A5677.jpg');
+    background-size: cover;
+    animation: fadeScale 3s infinite;
+}
+
+@keyframes fadeScale {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+

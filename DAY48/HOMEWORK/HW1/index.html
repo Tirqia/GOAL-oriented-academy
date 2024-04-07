@@ -1,0 +1,17 @@
+<img id="image" src="247A5677.JPG" alt="Image 1" width="250px">
+<button onclick="showPrevious()">Previous</button>
+<button onclick="showNext()">Next</button>
+
+<script>
+let currentImage = 1;
+
+function showPrevious() {
+    document.getElementById("image").src = "247A5677.JPG";
+    currentImage = 1;
+}
+
+function showNext() {
+    document.getElementById("image").src = "Screenshot 2024-03-28 224037.png";
+    currentImage = 2;
+}
+</script>

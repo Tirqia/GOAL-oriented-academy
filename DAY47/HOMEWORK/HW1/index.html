@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HW1</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <img class="photo" src="MYMe.jpg" id="photo">
+
+    <button onclick="resize(300)">300px</button>
+    <button onclick="resize(500)">500px</button>
+
+    <script>
+        function resize(width) {
+            document.getElementById('photo').style.width = width + 'px';
+        }
+    </script>
+</body>
+</html>
