@@ -7,4 +7,7 @@ age = "15"
 height = "1,74"
 hobby = "programming"
 
-print(proposal + " " + name + " " + surname + " " + live + " " + age + " " + height + " " + hobby) 
+print(proposal + " " + name + " " + surname + " " +
+      live + " " + age + " " + height + " " + hobby)
+
+
