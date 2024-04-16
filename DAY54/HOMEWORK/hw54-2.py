@@ -1,17 +1,3 @@
-# book1 = "book1"
-# book2 = "book2"
-# book3 = "book3"
-# book4 = "book4"
-# book5 = "book5"
-# book6 = "book6"
-# book7 = "book7"
-# book8 = "book8"
-# book9 = "book9"
-# book10 = "book10"
-
-# disscount10 = 0, 1
-# disscount20 = 0, 2
-
 books = {
     "Book 1": 10,
     "Book 2": 15,
@@ -37,5 +23,5 @@ print("ფასი 20% ფასდაკლებით დანარჩე�
 
 
 # print(10 + 15 + 20 + 25 + 30 + 35 + 40 + 45 + 50 + 55)
-print(325 * 0.9)
-print(292.5 * 0.8)
+# print(325 * 0.9)
+# print(292.5 * 0.8)
