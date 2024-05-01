@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increment and Decrement Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        #subtract-btn {
+            color: #fff;
+            background-color: #f44336; /* Red */
+        }
+
+        #reset-btn {
+            color: #333;
+            background-color: #f0f0f0; /* Light gray */
+        }
+
+        #add-btn {
+            color: #fff;
+            background-color: #4caf50; /* Green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="number">0</p>
+        <button id="subtract-btn">-1</button>
+        <button id="reset-btn">Reset</button>
+        <button id="add-btn">+1</button>
+    </div>
+
+    <script>
+        const numberElement = document.getElementById('number');
+        const subtractBtn = document.getElementById('subtract-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const addBtn = document.getElementById('add-btn');
+
+        let number = 0;
+
+        subtractBtn.addEventListener('click', () => {
+            number -= 1;
+            updateNumber();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            number = 0;
+            updateNumber();
+        });
+
+        addBtn.addEventListener('click', () => {
+            number += 1;
+            updateNumber();
+        });
+
+        function updateNumber() {
+            numberElement.textContent = number;
+        }
+    </script>
+</body>
+</html>

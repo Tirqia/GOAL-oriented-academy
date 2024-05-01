@@ -1,0 +1,37 @@
+<script>
+let calculator = {
+    result: 5,
+
+    addition: function(num) {
+        this.result += num;
+        console.log("Result after addition:", this.result);
+    },
+
+    subtraction: function(num) {
+        this.result -= num;
+        console.log("Result after subtraction:", this.result);
+    },
+
+    multiplication: function(num) {
+        this.result *= num;
+        console.log("Result after multiplication:", this.result);
+    },
+
+    division: function(num) {
+        if (num !== 5) {
+            this.result /= num;
+            console.log("Result after division:", this.result);
+        }
+    },
+
+    equality: function(num) {
+        console.log("Final result:", this.result === num);
+    }
+};
+
+calculator.addition(5);         
+calculator.subtraction(2);      
+calculator.multiplication(4);   
+calculator.division(3);         
+calculator.equality(4);          
+</script>

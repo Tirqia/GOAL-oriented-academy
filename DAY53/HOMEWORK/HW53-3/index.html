@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Text Color</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #green-btn {
+        color: #fff;
+        background-color: #28a745; /* Green */
+    }
+
+    #red-btn {
+        color: #fff;
+        background-color: #dc3545; /* Red */
+    }
+
+    #yellow-btn {
+        color: #333;
+        background-color: #ffc107; /* Yellow */
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Change Text Color</h1>
+        <p>მე მწვანე მიხდება 🍏</p>
+        <p>მე წითელი მიხდება 🍎</p>
+        <p>მე ყვითელი მიხდება 🍋</p>
+        <button id="green-btn">Make Green</button>
+        <button id="red-btn">Make Red</button>
+        <button id="yellow-btn">Make Yellow</button>
+    </div>
+
+    <script>
+        const greenBtn = document.getElementById('green-btn');
+        const redBtn = document.getElementById('red-btn');
+        const yellowBtn = document.getElementById('yellow-btn');
+
+        const paragraphs = document.querySelectorAll('p');
+
+        greenBtn.addEventListener('click', () => {
+            paragraphs.forEach((p) => {
+                p.style.color = 'green';
+            });
+        });
+
+        redBtn.addEventListener('click', () => {
+            paragraphs.forEach((p) => {
+                p.style.color = 'red';
+            });
+        });
+
+        yellowBtn.addEventListener('click', () => {
+            paragraphs.forEach((p) => {
+                p.style.color = 'yellow';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorite Movies</title>
+<style>
+     body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+     }
+
+     .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+     }
+
+     h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+     }
+
+     ul {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+     }
+
+     li {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+     }
+
+     li:hover {
+        transform: translateY(-5px);
+     }
+
+     .movie {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #f0f0f0;
+     }
+
+     .movie img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px 8px 0 0;
+     }
+
+     .movie-details {
+        padding: 10px;
+     }
+
+     .movie-name {
+        font-weight: bold;
+        margin-bottom: 5px;
+     }
+
+     .movie-year {
+        color: #777;
+        margin-bottom: 5px;
+     }
+
+     .movie-genre {
+        margin-bottom: 10px;
+     }
+
+     .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        background-color: #000000;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+     }
+
+     .btn:hover {
+        background-color: #373737;
+     }
+</style>
+</head>
+<body>
+     <div class="container">
+         <h1>My Favorite Movies</h1>
+         <ul id="movie-list"></ul>
+     </div>
+
+     <script>
+         const movies = [
+             {
+                 name: 'Se7en',
+                 genre: 'Drama, Crime, Mystery',
+                 releaseYear: 1995,
+                 link: 'https://www.imdb.com/title/tt0114369/',
+                 image: 'https://picfiles.alphacoders.com/122/thumb-1920-122371.jpg'
+             },
+             {
+                 name: 'The Godfather',
+                 genre: 'Crime, Drama',
+                 releaseYear: 1972,
+                 link: 'https://www.imdb.com/title/tt0068646/',
+                 image: 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg'
+             },
+             {
+                 name: 'Need for Speed',
+                 genre: 'Action, Crime, Thriller',
+                 releaseYear: 2014,
+                 link: 'https://www.imdb.com/title/tt2369135/',
+                 image: 'https://br.web.img2.acsta.net/pictures/14/03/08/08/41/128657.jpg'
+             },
+             {
+                 name: 'The Amazing Spider-Man',
+                 genre: 'Action, Adventure, Sci-Fi',
+                 releaseYear: 2012,
+                 link: 'https://www.imdb.com/title/tt0948470/',
+                 image: 'https://pics.filmaffinity.com/the_amazing_spider_man_the_amazing_spiderman-672391099-large.jpg'
+             },
+             {
+                 name: "Hachi: A Dog's Tale",
+                 genre: 'Biography, Drama, Family',
+                 releaseYear: 1994,
+                 link: 'https://www.imdb.com/title/tt1028532/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_Hach',
+                 image: 'https://i.pinimg.com/originals/b6/30/7b/b6307b95fafac1b1178ef14f2ca6528e.jpg'
+             }
+         ];
+
+         const movieListElement = document.getElementById('movie-list');
+
+         movies.forEach((movie) => {
+             const li = document.createElement('li');
+             li.classList.add('movie');
+             li.innerHTML = `
+                 <img src="${movie.image}" alt="${movie.name}">
+                 <div class="movie-details">
+                     <div class="movie-name">${movie.name}</div>
+                     <div class="movie-year">${movie.releaseYear}</div>
+                     <div class="movie-genre">${movie.genre}</div>
+                     <button class="btn" onclick="window.open('${movie.link}', '_blank')">Details</button>
+                 </div>`;
+             movieListElement.appendChild(li);
+         });
+     </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Info</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    p {
+        color: black;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Information</h1>
+        <div id="car-info"></div>
+        <img src="https://media.evo.co.uk/image/private/s--3WrS76Se--/v1592380925/evo/2020/06/P90390716_highRes.jpg" alt="Car Image" style="max-width: 100%">
+    </div>
+
+    <script>
+        const carInfo = {
+        brand: 'BMW',
+        model: 'M5 Competition',
+        year: 2020,
+        color: 'Black',
+        engine: '5.0L',
+        summarize: function() {
+            return `This car is a ${this.year} ${this.brand} ${this.model} it is a ${this.color} color with a ${this.engine} engine.`;
+        }
+        };
+
+        const carInfoElement = document.getElementById('car-info');
+        carInfoElement.textContent = carInfo.summarize();
+    </script>
+</body>
+</html>

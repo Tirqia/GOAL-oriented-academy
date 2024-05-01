@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: blue;
+  }
+  p {
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 15px;
+    background-color: rgb(100, 25, 25);
+  }
+  button {
+    padding: 10px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="outer-container">
+  <div class="container">
+    <p id="p1">ეს არის პირველი პარაგრაფი</p>
+    <p id="p2">ეს არის მეორე პარაგრაფი</p>
+    <p id="p3">ეს არის მესამე პარაგრაფი</p>
+    <button onclick="rotateParagraphs()">აბრუნე პარაგრაფი</button>
+  </div>
+</div>
+<script>
+  function rotateParagraphs() {
+    const p1 = document.getElementById('p1').innerText;
+    const p2 = document.getElementById('p2').innerText;
+    const p3 = document.getElementById('p3').innerText;
+
+    document.getElementById('p1').innerText = p3;
+    document.getElementById('p2').innerText = p1;
+    document.getElementById('p3').innerText = p2;
+  }
+</script>
+</body>
+</html>
