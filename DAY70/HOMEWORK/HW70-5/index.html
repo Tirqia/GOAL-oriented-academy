@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallest Number</title>
+    <script>
+        function SmallestNumber() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            const num3 = parseFloat(document.getElementById("number3").value);
+            const result = Math.min(num1, num2, num3);
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <input type="number" id="number2" placeholder="Enter second number">
+    <input type="number" id="number3" placeholder="Enter third number">
+    <button onclick="SmallestNumber()">Smallest Number</button>
+    <p id="result"></p>
+</body>
+</html>

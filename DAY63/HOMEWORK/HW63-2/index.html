@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number compare</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enter Numbers</h1>
+        <form id="compareForm">
+            <div class="form-group">
+                <label for="number1">Number 1:</label>
+                <input type="number" id="number1" name="number1" required>
+            </div>
+            <div class="form-group">
+                <label for="number2">Number 2:</label>
+                <input type="number" id="number2" name="number2" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('compareForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const number1 = parseFloat(document.getElementById('number1').value);
+            const number2 = parseFloat(document.getElementById('number2').value);
+            
+            const isEqual = number1 === number2;
+            const isGreater = number1 > number2;
+            const isLess = number1 < number2;
+            
+            console.log(`Number 1 == Number 2: ${isEqual}`);
+            console.log(`Number 1 > Number 2: ${isGreater}`);
+            console.log(`Number 1 < Number 2: ${isLess}`);
+        });
+    </script>
+</body>
+</html>

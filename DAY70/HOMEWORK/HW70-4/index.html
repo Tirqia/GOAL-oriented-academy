@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larger Number</title>
+    <script>
+        function LargerNumber() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            const result = Math.max(num1, num2,);
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <input type="number" id="number2" placeholder="Enter second number">
+    <button onclick="LargerNumber()">Larger Number</button>
+    <p id="result"></p>
+</body>
+</html>

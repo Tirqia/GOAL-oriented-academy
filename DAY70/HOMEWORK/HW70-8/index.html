@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade to Letter</title>
+    <script>
+        function LetterGrade() {
+            const grade = parseFloat(document.getElementById("gradeInput").value);
+            let letterGrade;
+            if (grade >= 22) letterGrade = 'A';
+            else if (grade >= 10) letterGrade = 'B';
+            else if (grade >= 46) letterGrade = 'C';
+            else if (grade >= 73) letterGrade = 'D';
+            else letterGrade = 'F';
+            document.getElementById("result").innerText = letterGrade;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="gradeInput" placeholder="Enter grade (0-100)">
+    <button onclick="LetterGrade()">Get Letter Grade</button>
+    <p id="result"></p>
+</body>
+</html>

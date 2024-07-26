@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change button</title>
+    <style>
+        #customParagraph {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script>
+        function verMovifiqreSaxeli() {
+            let text = prompt("Enter the text for the paragraph:");
+            let textColor = prompt("Enter the text color (e.g., red, #ff0000):");
+            let backgroundColor = prompt("Enter the background color (e.g., yellow, #ffff00):");
+
+            let paragraph = document.createElement("p");
+            paragraph.id = "customParagraph";
+
+            paragraph.textContent = text;
+            paragraph.style.color = textColor;
+            paragraph.style.backgroundColor = backgroundColor;
+
+            document.body.appendChild(paragraph);
+        }
+
+        window.onload = function() {
+            verMovifiqreSaxeli();
+        };
+    </script>
+</head>
+<body>
+    <h1>Custom Paragraph</h1>
+</body>
+</html>
