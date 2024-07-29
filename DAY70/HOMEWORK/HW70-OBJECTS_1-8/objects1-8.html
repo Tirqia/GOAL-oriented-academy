@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined JS Tasks</title>
+</head>
+<body>
+    <h1>Check the console for output</h1>
+    <script>
+// Create an object representing a person with properties like name, age, and city.        
+    let individual = {
+    fullName: "Jumberiko volki",
+    years: 12,
+    location: "Bneli samyaro"
+    };
+
+// Write code to access and log the name and age of the person object created in task 1.    
+    console.log("Full Name:", individual.fullName);
+    console.log("Years:", individual.years);
+// Add a property for email to the person object and set its value.    
+    individual.contact = "Xrustaliko12@gmail.com";
+    console.log("Contact:", individual.contact);
+
+// Create an object representing a car with properties like make, model, and an owner object with properties like name and age.    
+    let vehicle = {
+        brand: "BMW",
+        type: "GATRINOLEBULI",
+        proprietor: {
+            fullName: "Xrustaliko",
+                years: 12
+        }
+    };
+
+// Write code to access and log the owner's name and age of the car object created in task 4.
+console.log("Proprietor's Years:", vehicle.proprietor.years);
+
+// Change the type of the vehicle
+vehicle.type = "M3";
+console.log("Updated Type:", vehicle.type);
+
+// Add a method to the car object that calculates the age of the car based on the current year and the year the car was manufactured. (Do not use this keyword)        
+    vehicle.yearOfcar = 2012;
+    vehicle.computeAge = function(currentYear) {
+        return currentYear - vehicle.yearOfProduction;
+    };
+
+// Log the age of the vehicle based on the current year
+    console.log("Vehicle Age:", vehicle.computeAge(2022));
+
+
+    </script>
+</body>
+</html>
