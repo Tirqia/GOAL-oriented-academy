@@ -44,17 +44,8 @@ while number > 0:
     number //= 10
 print(f"ყველაზე დიდი ციფრი არის {max_digit}")
 
-# 7. შემოწმება მოცემული რიცხვი (n) არის თუ არა პალინდრომი:
-palindrome_num = 12134
-original = palindrome_num
-reversed_palin = 0
-while palindrome_num > 0:
-    reversed_palin = reversed_palin * 10 + palindrome_num % 10
-    palindrome_num //= 10
-if original == reversed_palin:
-    print(f"{original} არის პალინდრომი")
-else:
-    print(f"{original} არ არის პალინდრომი")
+# 7. ...
+
 
 # 8. მოცემული რიცხვის (n) ციფრების ჯამის გამოთვლა:
 sum_num = 123  # შეგიძლიათ შეცვალოთ ეს მნიშვნელობა სხვა რიცხვის ციფრების ჯამის გამოსათვლელად

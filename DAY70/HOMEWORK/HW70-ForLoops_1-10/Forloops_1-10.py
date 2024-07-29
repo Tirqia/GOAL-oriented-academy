@@ -3,14 +3,15 @@ for i in range(1, 11):
     print(i)
 
 # 2. დაბეჭდე ლუწი რიცხვები 1-დან 20-მდე:
-for i in range(2, 21, 2):
+for i in range(4, 21, 4):
     print(i)
 
 # 3. გამოთვალე და დაბეჭდე რიცხვების ჯამი 1-დან 100-მდე:
-total_sum = 0
-for i in range(1, 101):
-    total_sum += i
-print(f"რიცხვების ჯამი 1-დან 100-მდე არის {total_sum}")
+# total_sum = 0
+# for i in range(1, 101):
+#     total_sum += i
+# print(f"რიცხვების ჯამი 1-დან 100-მდე არის {total_sum}")
+
 
 # 4. დაბეჭდე 5-ის ჯერადი რიცხვები 50-მდე:
 for i in range(5, 51, 5):
