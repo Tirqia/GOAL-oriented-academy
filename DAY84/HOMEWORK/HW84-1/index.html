@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Animation და ახსნა</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #4a90e2;
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #e8e8e8;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .browser-display {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: #ffffff;
+            position: relative;
+            height: 400px;
+        }
+
+        .browser-header {
+            background: #333;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .browser-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .browser-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff5f56;
+        }
+
+        .browser-button:nth-child(2) {
+            background: #ffbd44;
+        }
+
+        .browser-button:nth-child(3) {
+            background: #27c93f;
+        }
+
+        .browser-body {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        #animation-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            background: #e0e0e0;
+            border: 3px solid #4a90e2;
+            border-radius: 15px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        #child-container {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #ff6347;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #child-container:hover {
+            background: #4682b4;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Animation და ახსნა</h1>
+
+        <div class="browser-display">
+            <div class="browser-header">
+                <div>JavaScript Animation in Action</div>
+                <div class="browser-buttons">
+                    <div class="browser-button"></div>
+                    <div class="browser-button"></div>
+                    <div class="browser-button"></div>
+                </div>
+            </div>
+            <div class="browser-body">
+                <div id="animation-container">
+                    <div id="child-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="description">
+            <h2>კოდის ახსნა:</h2>
+            <p><strong>const child = document.getElementById("child-container");</strong> - ირჩევს ელემენტს id="child-container".</p>
+            <p><strong>let left = 0; let y = 0; let direct = "right";</strong> - განსაზღვრავს ელემენტის დაწყებით პოზიციებს და მოძრაობის მიმართულებას.</p>
+            <p><strong>setInterval(function() {...}, 10);</strong> - ფუნქცია, რომელიც ყოველ 10 მილიწამში იწარმოება და განახლებას ახდენს ელემენტის პოზიციაზე.</p>
+            <p><strong>if-else ციკლი</strong> - განსაზღვრავს ელემენტის მოძრაობის მიმართულებას და ანიმაციის მართვას. როდესაც ელემენტი მიაღწევს კონკრეტულ პოზიციას, გადადის ახალ მიმართულებაზე.</p>
+            <p><strong>child.style.left</strong> და <strong>child.style.top</strong> - ელემენტის პოზიციის განახლება თითოეულ განახლების წრეზე.</p>
+        </div>
+    </div>
+
+    <script>
+        const child = document.getElementById("child-container");
+        const container = document.getElementById("animation-container");
+        
+        let left = 0;
+        let y = 0;
+        let direct = "right";
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
+        const childSize = 60;
+
+        const moveRight = setInterval(function(){
+            if(direct == "right"){
+                left++;
+                if(left >= (containerWidth - childSize)){
+                    direct = "bottom";
+                }
+            } else if(direct == "bottom"){
+                y++;
+                if(y >= (containerHeight - childSize)){
+                    direct = "left";
+                }
+            } else if(direct == "left"){
+                left--;
+                if(left <= 0){
+                    direct = "top";
+                }
+            } else {
+                y--;
+                if(y <= 0 && left <= 0){
+                    clearInterval(moveRight);
+                }
+            }
+
+            child.style.left = left + 'px';
+            child.style.top = y + 'px';
+        }, 10);
+    </script>
+</body>
+</html>

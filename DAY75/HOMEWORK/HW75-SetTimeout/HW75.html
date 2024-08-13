@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .example {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .message {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 15px;
+            background-color: #28a745;
+            color: #fff; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            display: none; 
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Timeout Examples</h1>
+
+    <div class="example">
+        <h2>1. Alert Message "Hello!" after 2 Seconds</h2>
+        <button onclick="showAlert()">Show Alert</button>
+    </div>
+
+    <div class="example">
+        <h2>2. Countdown from 5 to 1</h2>
+        <button onclick="startCountdown()">Start Countdown</button>
+        <div id="countdown"></div>
+    </div>
+
+    <div class="example">
+        <h2>3. Success Message for 5 Seconds</h2>
+        <button onclick="showSuccessMessage()">Show Success Message</button>
+        <div class="message" id="successMessage">Success!</div>
+    </div>
+
+    <script>
+        // 1. აჩვენეთ გაფრთხილება "Hello!" 2 წამში დაგვიანებით
+        function showAlert() {
+            setTimeout(function() {
+                alert("Hello!");
+            }, 2000); 
+        }
+
+        // 2. დავიწყოთ 5-დან 1-მდე, თითოეული ციფრი კონსოლში 1 წამში
+        function startCountdown() {
+            let countdownElement = document.getElementById("countdown");
+            countdownElement.innerHTML = "";
+            let current = 5;
+            function logCountdown() {
+                countdownElement.innerHTML = current;
+                current--;
+                if (current >= 1) {
+                    setTimeout(logCountdown, 1000); 
+                }
+            }
+            logCountdown();
+        }
+
+        // 3. აჩვენეთ წარმატების შეტყობინება 5 წამი და შემდეგ ავტომატურად დაფაროს
+        function showSuccessMessage() {
+            let message = document.getElementById("successMessage");
+            message.style.display = "block";
+            setTimeout(function() {
+                message.style.display = "none";
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ელემენტის დამატება</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 12px;
+        }
+        h1 {
+            color: #141414;
+        }
+        p {
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>ეს არის მარტივი HTML გვერდი, რომელიც აჩვენებს, თუ როგორ შეგვიძლია JS-ის მეშვეობით ახალი ელემენტის შექმნა</p>
+
+<script>
+    // ახალი ელემენტის შექმნა
+    var new_element = document.createElement("anything");
+
+    // ელემენტის ტექსტის დამატება
+    new_element.textContent = "ეს არის ახალი ელემენტი";
+
+    // ელემენტის სტილის დამატება
+    new_element.style.color = "red";  
+    new_element.style.fontSize = "13px";  
+
+    document.body.appendChild(new_element);
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Example</title>
+</head>
+<body>
+    <section id="mainSection">ეს არის სექცია ID-ით.</section>
+
+    <article class="highlighted">პირველი სტატია</article>
+    <article class="highlighted">მეორე სტატია</article>
+    <article class="highlighted">მესამე სტატია</article>
+
+    <aside>პირველი გვერდი</aside>
+    <aside>მეორე გვერდი</aside>
+    <aside>მესამე გვერდი</aside>
+
+    <article class="highlighted">მეოთხე სტატია</article>
+    <footer id="mainFooter">ბოლო გვერდი</footer>
+    <nav>ნავიგაცია</nav>
+
+    <script>
+        var element1 = document.getElementById("mainSection");
+        console.log(element1.textContent);
+        element1.style.color = "brown";
+        element1.textContent = "სექცია განახლდებულია";
+
+        var elementsByClass = document.getElementsByClassName("highlighted");
+        console.log(elementsByClass.length);
+        elementsByClass[0].style.fontWeight = "bold";
+        elementsByClass[2].textContent = "მესამე სტატია განახლებულია";
+
+        var elementsByTag = document.getElementsByTagName("aside");
+        console.log(elementsByTag.length);
+        elementsByTag[1].style.backgroundColor = "green";
+        elementsByTag[0].textContent = "პირველი გვერდი შეცვლილია";
+
+        var queryElement = document.querySelector(".highlighted");
+        console.log(queryElement.textContent);
+        queryElement.style.color = "green";
+        var queryElementById = document.querySelector("#mainFooter");
+        queryElementById.textContent = "ბოლო გვერდი განახლებულია";
+
+        var queryAllElements = document.querySelectorAll(".highlighted");
+        console.log(queryAllElements.length);
+        queryAllElements.forEach(function(el) {
+            el.style.color = "blue";
+        });
+
+        var parentElement = document.getElementById("mainSection");
+        var childElements = parentElement.children;
+        console.log(childElements.length);
+
+        var firstChild = elementsByTag[0].firstElementChild;
+        console.log(firstChild);
+
+        var lastChild = elementsByTag[0].lastElementChild;
+        console.log(lastChild);
+
+        var nextSibling = elementsByClass[0].nextElementSibling;
+        console.log(nextSibling.textContent);
+
+        var previousSibling = elementsByClass[1].previousElementSibling;
+        console.log(previousSibling.textContent);
+    </script>
+</body>
+</html>
